@@ -13,7 +13,10 @@ document.getElementById("years").innerHTML = d;
 // function that reads the value of the range slider 
 // and displays it the <span>adjacent to the slider
 
-function 
+function range() {
+    output=document.getElementById("rate").value
+    document.getElementById('spanRate').innerHTML = output;   
+} 
 
 
 function compute()
