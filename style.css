@@ -1,27 +1,35 @@
 body {background-color: black;
-    font: arial;
+    font: Arial;
     color: white;
     
     }
     
 h1 {color:grey;
-    font: verdana;
+    font-family: Verdana, sans-serif;
     
     }
 .maindiv {background-color: white;
     color: black;
-    width: 400px;
+    width: 500px;
     padding: 20px;
     border-radius: 25px;
 }
-.subdiv {margin-left: 50px;
+.subdiv {margin-left: 80px;
 }
 .center {
-  margin: auto;
-  width: 60%;
-  padding: 40px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.highlight{
+    background: yellow;
+}
 
 
 
