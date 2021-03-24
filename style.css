@@ -1,20 +1,25 @@
 body {background-color: black;
     font: arial;
     color: white;
+    
     }
     
 h1 {color:grey;
     font: verdana;
+    
     }
-
 .maindiv {background-color: white;
     color: black;
-    width: 300px;
+    width: 400px;
     padding: 20px;
     border-radius: 25px;
 }
-
 .subdiv {margin-left: 50px;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 40px;
 }
 
 
