@@ -47,7 +47,7 @@ function compute() {
     // Logic to convert the 'No of Years' into the actual
     // year in the future.
     const currentYear = new Date().getFullYear();
-    finalYear = (parseInt(currentYear) + parseInt(years) - 1);
+    finalYear = (parseInt(currentYear) + parseInt(years));
 
 
     // Write result message
