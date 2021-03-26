@@ -10,8 +10,7 @@ function principal_validation() {
     pr = document.getElementById("principal").value;
     if (pr <= 0 || pr == "" || (alphaExp.test(pr) == true)) {
         alert("Enter a positive number");
-        document.getElementById('principal').onfocus();
-        document.getElementById('principal').blur();
+        setTimeout("document.getElementById('principal').focus();", 1);
         document.getElementById('principal').value = "";
         document.getElementById("result").innerHTML = "";
 
