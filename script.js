@@ -4,7 +4,7 @@ var years = document.getElementById("years").value;
 var interest = principal * year * rate / 100
 
 
-// function that validates the principal input
+// function that validates the principal input box
 function principal_validation() {
     var alphaExp = /^[a-zA-Z]+$/;
     pr = document.getElementById("principal").value;
