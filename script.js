@@ -51,7 +51,7 @@ function compute() {
 
 
     // Write result message
-    res = "<br>" + "If you deposit " + "<span class='highlight'>" +
+    var res = "<br>" + "If you deposit " + "<span class='highlight'>" +
         principal + "</span>" + "," + "<br>" + "at an interest rate of " +
         "<span class='highlight'>" + rate + "%" + "</span>" + "." + "<br>" +
         "You will receive an amount of " + "<span class='highlight'>" +
@@ -59,8 +59,9 @@ function compute() {
         "in the year " + "<span class='highlight'>" + finalYear + "</span>" +
         "." + "<br>";
 
-
+    result = "";
     result = document.getElementById("result");
+
     result.innerHTML = res;
 
 
