@@ -4,6 +4,22 @@ var years = document.getElementById("years").value;
 var interest = principal * year * rate / 100
 
 
+// function that validates the principal input
+function principal_validation() {
+    var alphaExp = /^[a-zA-Z]+$/;
+    pr = document.getElementById("principal").value;
+    if (pr <= 0 || pr == "" || (alphaExp.test(pr) == true)) {
+        alert("Enter a positive number");
+        document.getElementById('principal').onfocus();
+        document.getElementById('principal').blur();
+        document.getElementById('principal').value = "";
+        document.getElementById("result").innerHTML = "";
+
+        return false;
+    }
+}
+
+
 // function that reads the value of the range slider
 // and displays it the <span>adjacent to the slider
 function range() {
@@ -13,7 +29,9 @@ function range() {
 
 function compute() {
 
-    principal = document.getElementById("principal").value;
+    // Get principal from principal validation function
+    principal_validation();
+    principal = pr;
 
     // Get rate from range function
     range();
@@ -33,7 +51,7 @@ function compute() {
 
 
     // Write result message
-    var res = "<br>" + "If you deposit " + "<span class='highlight'>" +
+    res = "<br>" + "If you deposit " + "<span class='highlight'>" +
         principal + "</span>" + "," + "<br>" + "at an interest rate of " +
         "<span class='highlight'>" + rate + "%" + "</span>" + "." + "<br>" +
         "You will receive an amount of " + "<span class='highlight'>" +
@@ -41,7 +59,10 @@ function compute() {
         "in the year " + "<span class='highlight'>" + finalYear + "</span>" +
         "." + "<br>";
 
+
     result = document.getElementById("result");
     result.innerHTML = res;
+
+
 
 }
